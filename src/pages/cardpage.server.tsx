@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from "http"
 
 // function checks if user cookies exist on req object. If it doesn't, this will redirect the user to login page. Uses 302 for "temporary redirect"
-export default async function getServerSideProps({
+export async function getServerSideProps({
   req,
   res,
 }: {

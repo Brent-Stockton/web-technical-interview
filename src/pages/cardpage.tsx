@@ -1,6 +1,6 @@
 import homes from "../../data/homes.json"
 import CardList from "../components/cards/CardList"
-import getServerSideProps from "./cardpage.server"
+import { getServerSideProps } from "../pages/cardpage.server"
 
 const CardPage = () => {
   return (
