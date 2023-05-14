@@ -6,7 +6,13 @@ export function authenticateUser(
   email: string,
   password: string
 ) {
-  return users.find(
+  const user = users.find(
     (user) => user.email === email && user.password === password
   )
+
+  if (user) {
+    return user
+  } else {
+    return null
+  }
 }
