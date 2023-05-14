@@ -1,6 +1,13 @@
 import { IncomingMessage, ServerResponse } from "http"
 
-// function checks if user cookies exist on req object. If it doesn't, this will redirect the user to login page. Uses 302 for "temporary redirect"
+/**
+Checks if user cookies exist on the IncomingMessage object.
+If not, this function redirects user to login page with a "temporary redirect" 302 status code.
+@param {Object} params - Object containing the request and response objects.
+@param {http.IncomingMessage} params.req - The HTTP request object.
+@param {http.ServerResponse} params.res - The HTTP response object.
+@returns {Object} - An object containing the props to be passed to the page component.
+*/
 export async function getServerSideProps({
   req,
   res,
